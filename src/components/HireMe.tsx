@@ -15,9 +15,13 @@ const HireMe: FC<{account: Account}> = ({account}) => {
                     <span className="text-2xl handShake">🤚</span>
                 </div>
                 <Paragraphe text='I am available to create the perfect web experience for you.' />
-                <div className="self-end">
-                    <SendEmail mail={account.email} text="Hire me" />
-                </div>
+                {
+                    account.email ? 
+                    <div className="self-end mt-4">
+                        <SendEmail mail={account.email} text="Hire me" />
+                    </div>
+                    : null
+                }
             </div>
         </>
     )

@@ -4,7 +4,7 @@ const Badge: FC<{text: string, reactElement?: ReactElement}> = ({text, reactElem
 
     return(
         <>
-            <div className="bg-bgd flex flex-row gap-2 rounded px-2 py-1 hover:bg-bgd text-sec border border-sec hover:text-bgd hover:border-pri hover:bg-pri hover:scale-110 transition cursor-pointer fill-pri hover:fill-bgd">
+            <div className="bg-bgd flex flex-row gap-2 rounded px-2 py-1 hover:bg-bgd text-sec border border-sec hover:text-bgd hover:border-pri hover:bg-pri hover:scale-105 transition cursor-pointer fill-pri hover:fill-bgd">
                 <h4 className="font-mono text-xs font-extralight">{text}</h4>
                 {
                     reactElement && 

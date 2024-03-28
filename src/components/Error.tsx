@@ -20,7 +20,7 @@ const Error = () => {
                 <div className="fill-sec w-8 hover:scale-105">
                      <Fail />
                 </div>
-                <Paragraphe text={`Couldn't find: ${query}`} />
+                {query ? <Paragraphe text={`Couldn't find: ${query}`} /> : null}
             </div>
         </>
     )

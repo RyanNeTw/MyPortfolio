@@ -4,8 +4,8 @@ import Error from "../components/Error"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Loader from "../components/Loader"
+import Profil from "../components/Profil"
 import Repos from "../components/Repos"
-import ProfilPicture from "../components/UI/ProfilPicture"
 import { owner, useGetAccountInfosQuery, useGetAccountReposQuery } from "../services/getData"
 
 
@@ -27,7 +27,7 @@ const RepositoriesPage = () => {
         <>
             <Header account={data?.data}/>
             <section className="py-12 flex flex-col gap-8">
-                <ProfilPicture account={data?.data} />
+                <Profil account={data?.data} />
                 <Repos repositories={repos ? repos?.data : []} isLoading={isLoadingRepos} onlyFive={false}/>
             </section>
             <Footer account={data?.data} />

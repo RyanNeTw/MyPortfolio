@@ -22,8 +22,9 @@ const Profil: FC<{account: Account}> = ({account}) => {
                     <Badge text={`${account.followers.toString()} Followers`} />
                     <Badge text={`${account.following.toString()} Followings`} />
                     <Link to={"/repositories"}>
-                        <Badge text={`${account.public_repos.toString()} Repositories`} />
+                        <Badge text={`${account.public_repos.toString()} Public repos`} />
                     </Link>
+                    {account.total_private_repos ? <Badge text={`${account.total_private_repos.toString()} Private repos`} /> : null}
                 </div>
                 <Paragraphe text={account.bio} />
                 <Socials account={account} />

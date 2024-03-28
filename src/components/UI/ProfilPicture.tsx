@@ -11,6 +11,7 @@ const ProfilPicture: FC<{account: Account}> = ({account}) => {
                     src={account.avatar_url} 
                     alt={`${account.login}'s avatar url github`} 
                     className="rounded-lg w-12 outline outline-pri outline-offset-2 outline-1"
+                    loading="lazy"
                 />
                 <div className="flex flex-row gap-1 items-center relative">
                     <a href={`${account.blog}`} target="_blank" rel="noreferrer">

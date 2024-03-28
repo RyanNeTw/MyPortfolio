@@ -2,8 +2,6 @@
 
 - [@My website](https://ryantw.net/)
 
-
-
 ## Installation
 
 ```bash
@@ -14,7 +12,6 @@
 ```
     
 ## About
-
 
 - I use my api to fetch on the Github api to avoid the rate limit of 60 so I get to 3000.
 - You can view my Github account through my platform and more about me.

@@ -10,7 +10,7 @@ const Content = () =>  {
     return(
         <>
             <Title title="Repos" />
-            <Paragraphe text="My github public repositories" />
+            <Paragraphe text="My github public repositories." />
         </>
     )
 }

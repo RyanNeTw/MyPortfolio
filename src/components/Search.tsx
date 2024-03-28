@@ -27,25 +27,21 @@ const Search = () => {
 
     return(
         <>
-            <div>
+            <div className="flex flex-col">
                 <Title title="Search" />
-                <div className="w-full flex flex-wrap items-center">
-                    <div className="md:w-1/2 w-full">
-                        <Paragraphe text="Search for your GitHub nickname, you won't regret it! 😁" />
-                    </div>
-                    <div className="md:w-1/2 w-full flex flex-row gap-2 items-end">
-                        <input 
-                            type={"text"} 
-                            placeholder="Your Github nickname"
-                            value={inputValue}
-                            onChange={handleInputChange}
-                            onKeyDown={handleKeyDown}
-                            className="bg-transparent w-full text-sec outline-none border-b border-sec focus:text-pri focus:border-pri"
-                        />
-                        <span className="text-sec w-6 fill-sec hover:fill-pri cursor-pointer" onClick={clearUrl}>
-                            <Clear />
-                        </span>
-                    </div>
+                <Paragraphe text="Search for your GitHub nickname, you won't regret it! 😁" />
+                <div className="md:w-1/2 w-full flex flex-row gap-2 self-end mt-4">
+                    <input 
+                        type={"text"} 
+                        placeholder="Your Github nickname"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                        onKeyDown={handleKeyDown}
+                        className="bg-transparent w-full text-sec outline-none border-b border-sec focus:text-pri focus:border-pri"
+                    />
+                    <span className="text-sec w-6 fill-sec hover:fill-pri cursor-pointer" onClick={clearUrl}>
+                        <Clear />
+                    </span>
                 </div>
             </div>
         </>

@@ -23,6 +23,7 @@ const Element: FC<{element: Skill}> = ({element}) => {
                     src={element.image_link}
                     alt={element.image_alt}
                     className="rounded-lg w-12 self-center"
+                    loading="lazy"
                 />
                 <h5 className="font-mono text-xs text-sec self-center">{element.language_name}</h5>
             </a>
