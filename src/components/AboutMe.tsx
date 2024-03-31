@@ -22,7 +22,7 @@ return (
                 />
             </div>
             <Link to={"/about"} className="self-end mt-2">
-                <Button text="More" />
+                <Button text="Learn more" />
             </Link>
         </div>
     </>

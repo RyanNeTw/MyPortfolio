@@ -4,6 +4,7 @@ import MainPage from './pages';
 import AboutPage from './pages/about';
 import ErrorPage from './pages/error';
 import RepositoriesPage from './pages/repositories';
+import ResumePage from './pages/resume';
 import { store } from './store';
 import { StoreProvider } from './store/store';
 
@@ -19,6 +20,7 @@ function App() {
                         <Route path="/" element={<MainPage />} />
                         <Route path="/repositories" element={<RepositoriesPage />} />
                         <Route path="/about" element={<AboutPage />} />
+                        <Route path="/my-resume" element={<ResumePage />} />
                         <Route path="*" element={<ErrorPage />}/>
                       </Routes>
               </BrowserRouter>

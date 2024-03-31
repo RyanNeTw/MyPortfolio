@@ -20,8 +20,8 @@ const guessLogoByUrl: FC<{url: string}> = ({url}): ReactElement | null => {
         case url.startsWith('https://github.com/'):
             return <Github />;
 
-        case url.includes('https://twitter.com/'):
-        case url.includes('https://x.com/'):
+        case url.startsWith('https://twitter.com/'):
+        case url.startsWith('https://x.com/'):
             return <Twitter />;
 
         case url.startsWith('https://www.linkedin.com/'):

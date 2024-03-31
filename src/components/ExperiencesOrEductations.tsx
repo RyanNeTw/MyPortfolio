@@ -17,7 +17,7 @@ const Element: FC<{object: Experience}>  = ({object}) => {
     return (
         <>
             <a href={object.website} target="_blank" rel="noreferrer">
-                <div className="flex flex-col gap-2 hover:scale-105 transition">
+                <div className="flex flex-col gap-2 hover:scale-105 transition group">
                     <div className="flex flex-row gap-2">
                         <img 
                             src={object.image_link} 
@@ -26,7 +26,7 @@ const Element: FC<{object: Experience}>  = ({object}) => {
                             loading="lazy"
                         />
                         <div>
-                            <h5 className="font-mono text-xs text-sec">{object.place}</h5>
+                            <h5 className="font-mono text-xs text-sec group-hover:text-pri transition">{object.place}</h5>
                             <h5 className="font-mono text-xs text-sec">{object.role}</h5>
                         </div>
                     </div>

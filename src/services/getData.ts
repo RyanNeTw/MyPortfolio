@@ -3,10 +3,12 @@ import { GitHubAccount, GitHubAccountOrgs, GitHubAccountRepos, GitHubAccountSoci
 
 export const owner = `RyanNeTw`
 
+const baseUrl = 'https://api.ryantw.net/api/user/'
+
 export const gitHubApi = createApi({
     reducerPath: 'gitHubApi',
     tagTypes: ['comments'],
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://api.ryantw.net/api/user/' }),
+    baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
         getAccountInfos: builder.query<GitHubAccount, string>({
             query: (name) => `${name}`,

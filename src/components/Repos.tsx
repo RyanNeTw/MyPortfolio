@@ -83,19 +83,14 @@ const Repos: FC<{onlyFive?:boolean, isLoading: boolean, repositories: Repo[]}> =
                         ))
                     }
                 </ul>
-               {
-                repos?.length > 5 && 
-                    ( 
-                        <div className="flex flex-row justify-between items-center mt-2">
-                            {onlyFive && 
-                                <Link to={`${url}`}>
-                                    <Button text="See more" />        
-                                </Link>
-                            }
-                            <h5 className="font-mono text-sec text-sm">{repos?.length} repositories</h5>
-                        </div>
-                    )
-               }
+                 <div className="flex flex-row justify-between items-center mt-2">
+                    {onlyFive && 
+                        <Link to={`${url}`}>
+                            <Button text="See more" />        
+                        </Link>
+                    }
+                    <h5 className="font-mono text-sec text-sm">{repos?.length} repositories</h5>
+                </div>
                {!repos?.length && <NoRepos />}
             </div>
         </>

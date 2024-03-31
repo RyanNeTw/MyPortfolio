@@ -21,9 +21,11 @@ const Hero: FC<{account: Account}> = ({account}) => {
                         addStyle="clear-none"
                     />
                 </div>
-                <Link to={"/about"} className="self-end">
-                    <Button text="About me"/>
-                </Link>
+                <div className="self-end flex flex-wrap gap-2">
+                    <Link to={"/my-resume"}>
+                        <Button text="My resume"/>
+                    </Link>
+                </div>
             </div>
         </>
     )
