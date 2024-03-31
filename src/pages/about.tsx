@@ -9,6 +9,7 @@ import educations from "../objects/Educations"
 import Skills from "../components/Skills"
 import skills from "../objects/Skills"
 import Error from "../components/Error"
+import Hero from "../components/Hero"
 
 
 const AboutPage = () => {
@@ -23,9 +24,10 @@ const AboutPage = () => {
             <Header account={data?.data} />
             <section className="py-12 flex flex-col gap-8">
                 <Profil account={data?.data} />
-                <ExperiencesOrEductations object={educations} subTitle={"My studies"} accordionIsOpen={true}/>
+                <Hero account={data?.data}/>
+                <Skills subTitle={"My skills"} object={skills} accordionIsOpen={true}/>
+                <ExperiencesOrEductations object={educations} subTitle={"My studies"} />
                 <ExperiencesOrEductations object={experiences} subTitle={"My experiences"}/>
-                <Skills subTitle={"My skills"} object={skills} />
             </section>
             <Footer account={data?.data} />
         </>

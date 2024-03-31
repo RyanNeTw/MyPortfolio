@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
+import AboutMe from "../components/AboutMe"
 import Error from "../components/Error"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+import Hero from "../components/Hero"
 import Loader from "../components/Loader"
 import Profil from "../components/Profil"
 import Repos from "../components/Repos"
@@ -28,6 +30,8 @@ const RepositoriesPage = () => {
             <Header account={data?.data}/>
             <section className="py-12 flex flex-col gap-8">
                 <Profil account={data?.data} />
+                <Hero account={data?.data}/>
+                <AboutMe />
                 <Repos repositories={repos ? repos?.data : []} isLoading={isLoadingRepos} onlyFive={false}/>
             </section>
             <Footer account={data?.data} />

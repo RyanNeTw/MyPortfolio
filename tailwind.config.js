@@ -14,7 +14,7 @@ module.exports = {
         "2xl": "1536px",
       },
       colors: {
-        pri: "#eab308",
+        pri: "#fb923c",
         sec: "#B8DBD9",
         thi: '#586F7C',
         bgd: '#09090b',

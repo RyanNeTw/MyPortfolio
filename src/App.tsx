@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages';
 import AboutPage from './pages/about';
+import ErrorPage from './pages/error';
 import RepositoriesPage from './pages/repositories';
 import { store } from './store';
 import { StoreProvider } from './store/store';
@@ -18,7 +19,7 @@ function App() {
                         <Route path="/" element={<MainPage />} />
                         <Route path="/repositories" element={<RepositoriesPage />} />
                         <Route path="/about" element={<AboutPage />} />
-                        <Route path="*" />
+                        <Route path="*" element={<ErrorPage />}/>
                       </Routes>
               </BrowserRouter>
             </StoreProvider>

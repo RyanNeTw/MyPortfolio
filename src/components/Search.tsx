@@ -16,7 +16,7 @@ const Search = () => {
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
-          navigate(`?search=${inputValue}`);
+          navigate(`?search=${inputValue?.trim()}`);
         }
     }
 
@@ -37,7 +37,7 @@ const Search = () => {
                         value={inputValue}
                         onChange={handleInputChange}
                         onKeyDown={handleKeyDown}
-                        className="bg-transparent w-full text-sec outline-none border-b border-sec focus:text-pri focus:border-pri"
+                        className="bg-transparent w-full text-sec outline-none border-b border-sec hover:border-pri hover:text-pri focus:text-pri focus:border-pri"
                     />
                     <span className="text-sec w-6 fill-sec hover:fill-pri cursor-pointer" onClick={clearUrl}>
                         <Clear />

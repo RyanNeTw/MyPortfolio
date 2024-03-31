@@ -1,11 +1,12 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import Logo from "../assets/Logo"
+import { owner } from "../services/getData"
 import { Account } from "../types"
 import Paragraphe from "./UI/Paragraphe"
 
 
-const Footer: FC<{account: Account}> = ({account}) => {
+const Footer: FC<{account?: Account}> = ({account}) => {
 
     return (
         <>
@@ -15,7 +16,7 @@ const Footer: FC<{account: Account}> = ({account}) => {
                         <div className="rotate-45">
                             <Logo />
                         </div>
-                        <h1 className="font-mono font-xs">{account.name ?? account.login}</h1>
+                        <h2 className="font-mono font-xs">{account?.name ?? account?.login ?? owner}</h2>
                     </Link>
                     <div className="flex flex-row gap-2 items-center">
                         <Paragraphe text="Thanks for visiting" size={true}/>

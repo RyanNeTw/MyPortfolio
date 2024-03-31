@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
+import AboutMe from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
 import Error from "../components/Error"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+import Hero from "../components/Hero"
 import HireMe from "../components/HireMe"
 import Loader from "../components/Loader"
 import Organizations from "../components/Organizations"
@@ -34,6 +36,8 @@ const MainPage = () => {
             <Header account={data.data}/>
             <section className="py-12 flex flex-col gap-8">
                 <Profil account={data.data} />
+                <Hero account={data?.data}/>
+                <AboutMe />
                 {orgs?.data?.data?.length ? <Organizations orgs={orgs ? orgs?.data?.data : []} /> : null}
                 <Repos repositories={repos ? repos?.data : []} isLoading={isLoadingRepos} />
                 <Summary repositories={repos ? repos?.data : []} isLoading={isLoadingRepos} />

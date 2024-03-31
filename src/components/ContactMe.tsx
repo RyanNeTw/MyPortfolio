@@ -13,11 +13,11 @@ const ContactMe: FC<{account: Account}> = ({account}) => {
                 <Title title="Contact me" />
                 <Paragraphe text="Find me on my social networks or send me an email." />
                 <div className="pt-4 flex flex-wrap gap-4 items-center">
-                    <Socials account={account} />
                     {
                         account.email && 
                         <SendEmail mail={account.email} />
                     }
+                    <Socials account={account} />
                 </div>
             </section>
         </>

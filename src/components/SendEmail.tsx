@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Button from "./UI/Button";
 
 const SendEmail: FC<{mail: string, text?: string}> = ({mail, text}) => {
     
@@ -9,9 +10,9 @@ const SendEmail: FC<{mail: string, text?: string}> = ({mail, text}) => {
     
     return (
         <>
-            <h3 className="text-sec font-mono text-sm underline cursor-pointer hover:text-pri transition" onClick={() => openEmailClient()}>
-                {text ?? mail}
-            </h3>
+            <div onClick={() => openEmailClient()}>
+                <Button text={text ?? mail} />
+            </div>  
         </>
      )
 }

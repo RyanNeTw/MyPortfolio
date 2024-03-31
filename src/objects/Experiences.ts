@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
       image_alt: "Le code partagé's logo",
       type: ExperienceEnum.BLOG,
       date_start: "01-12-2023",
-      language: ["ReactJs", "Strapi", "Tailwind"],
+      language: ["ReactJs", "Strapi", "Tailwind", "Typescript"],
       website: "https://lecodepartage.fr/",
     },
   ]

@@ -1,31 +1,32 @@
 import { FC } from "react"
 import { Skill } from "../types"
 import Accordion from "./UI/Accordion"
+import Badge from "./UI/Badge"
 
 
-const Skills: FC<{subTitle: string, object: Skill[]}> = ({subTitle, object}) => {
+const Skills: FC<{subTitle: string, object: Skill[], accordionIsOpen?: boolean}> = ({subTitle, object, accordionIsOpen = false}) => {
 
     return(
         <>
             <>
-                <Accordion subTitle={subTitle} reactElement={<List object={object}/>} />
+                <Accordion subTitle={subTitle} accordionIsOpen={accordionIsOpen} reactElement={<List object={object}/>} />
             </>
         </>
     )
 }
 
 const Element: FC<{element: Skill}> = ({element}) => {
+    const image =    <img 
+                        src={element.image_link}
+                        alt={element.image_alt}
+                        className="rounded-sm w-12 self-center"
+                        loading="lazy"
+                    />
 
     return(
         <>
             <a href={element.website} target="_blank" rel="noreferrer" className="flex flex-col justify-between hover:scale-105 transition">
-                <img 
-                    src={element.image_link}
-                    alt={element.image_alt}
-                    className="rounded-lg w-12 self-center"
-                    loading="lazy"
-                />
-                <h5 className="font-mono text-xs text-sec self-center">{element.language_name}</h5>
+                <Badge text={element.language_name} reactElement={image} />
             </a>
         </>
     )

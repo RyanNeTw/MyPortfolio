@@ -1,9 +1,10 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import Logo from "../assets/Logo"
+import { owner } from "../services/getData"
 import { Account } from "../types"
 
-const Header: FC<{account: Account}> = ({account}) => {
+const Header: FC<{account?: Account}> = ({account}) => {
 
     const style = 'font-mono font-xs'
     const linkStyle = 'text-sec hover:text-pri transition'
@@ -15,13 +16,8 @@ const Header: FC<{account: Account}> = ({account}) => {
                         <div className="rotate-45">
                             <Logo />
                         </div>
-                        <h1 className={`${style}`}>{account.name ?? account.login}</h1>
+                        <h1 className={`${style}`}>{account?.name ?? account?.login ?? owner}</h1>
                     </Link>
-                    <div>
-                        <Link to={'/about'}>
-                            <h3 className={`${style} ${linkStyle}`}>About</h3>
-                        </Link>
-                    </div>
                 </nav>
             </header>
         </>

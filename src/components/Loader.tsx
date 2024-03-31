@@ -18,9 +18,9 @@ const Loader: FC<{reactElement?: ReactElement}>  = ({reactElement}) => {
                     className="flex flex-row gap-2 justify-center items-center cursor-pointer"
                     onClick={clearUrl}
                 >
-                    <h1 className="text-thi font-mono font-medium text-2xl">RyanTw
+                    <h2 className="text-thi font-mono font-medium text-2xl">RyanTw
                         <span className="text-lg pl-2 font-thin">Portfolio</span>
-                    </h1>
+                    </h2>
                     <Logo />
                 </div>
                 {reactElement}
