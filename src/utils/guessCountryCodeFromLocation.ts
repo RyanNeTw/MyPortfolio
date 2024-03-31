@@ -5,7 +5,7 @@ const guessCountryCodeFromLocation = (location: string): string | null=> {
     if (!location) return null
     location = location.replaceAll("é", "e")
 
-    let country: string | null = isCountry(location.replace("é", "e")) ? location : null
+    let country: string | null = isCountry(location) ? location : null
     let array: string[] = []
 
     if (location.includes(",")) {
