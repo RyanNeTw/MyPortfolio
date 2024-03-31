@@ -7,7 +7,6 @@ import { Account } from "../types"
 const Header: FC<{account?: Account}> = ({account}) => {
 
     const style = 'font-mono font-xs'
-    const linkStyle = 'text-sec hover:text-pri transition'
     return (
         <>  
             <header className="w-full py-2 px-4 mt-2 bg-bgd rounded-lg">

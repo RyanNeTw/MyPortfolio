@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 import { Account } from "../types";
 import getDate from "../utils/getDate";
 import Socials from "./Socials";

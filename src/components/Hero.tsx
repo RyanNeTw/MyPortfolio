@@ -7,7 +7,7 @@ import Button from "./UI/Button"
 import Paragraphe from "./UI/Paragraphe"
 
 const Hero: FC<{account: Account}> = ({account}) => {
-    if (!account.hireable || account.login != owner) return null
+    if (!account.hireable || account.login !== owner) return null
 
     return(
         <>

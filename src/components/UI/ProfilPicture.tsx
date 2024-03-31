@@ -6,7 +6,7 @@ import guessCountryCodeFromLocation from "../../utils/guessCountryCodeFromLocati
 
 const ProfilPicture: FC<{account: Account}> = ({account}) => {
     const countryCode = guessCountryCodeFromLocation(account?.location)
-    
+
     return (
         <>
             <div className="flex flex-row gap-4 items-center">
@@ -24,7 +24,7 @@ const ProfilPicture: FC<{account: Account}> = ({account}) => {
                         {account.location?.length && 
                             <>
                                 <span className="text-sec font-mono text-xs">-</span>
-                                {countryCode ? <img src={`https://flagsapi.com/${countryCode}/shiny/64.png`} className="w-4"></img> : null}
+                                {countryCode ? <img src={`https://flagsapi.com/${countryCode}/shiny/64.png`} alt={`${account.location}'s flag`} className="w-4"></img> : null}
                                 <h3 className="text-sec font-mono text-xs"> {account.location}</h3>
                             </>
                         }
