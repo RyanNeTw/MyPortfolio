@@ -2,40 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
 body {
-    background: radial-gradient(circle, #000000, black 25%, #586F7C);
-
+  background: radial-gradient(circle, #000000, black 25%, #586f7c);
 }
 
 body::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; left: 0; bottom: 0;
-    background: radial-gradient(circle, transparent, black 25%, transparent);
-    animation: color 3s infinite ease-out alternate;
-    opacity: 0;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent, black 25%, transparent);
+  animation: color 3s infinite ease-out alternate;
+  opacity: 0;
+  z-index: -1;
 }
 
 @keyframes color {
-    0% {  background: radial-gradient(circle, transparent, black 25%, transparent); }
-    100% { opacity: 1; }
+  0% {
+    background: radial-gradient(circle, transparent, black 25%, transparent);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .handShake {
-    animation: handShakeAnimation 1s linear infinite;
-  }
+  animation: handShakeAnimation 1s linear infinite;
+}
 
 @keyframes handShakeAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(40deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

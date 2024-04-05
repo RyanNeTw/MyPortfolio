@@ -1,6 +1,6 @@
 const GenerateRandomHex = () => {
-    let n = (Math.random() * 0xfffff * 1000000).toString(16);
-    return '#' + n.slice(0, 6);
-  };
+  let n = (Math.random() * 0xfffff * 1000000).toString(16)
+  return '#' + n.slice(0, 6)
+}
 
-  export default GenerateRandomHex
+export default GenerateRandomHex
