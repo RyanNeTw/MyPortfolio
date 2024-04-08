@@ -8,6 +8,7 @@ import {
   useGetAccountFollowersQuery,
   useGetAccountFollowingsQuery,
   useGetAccountInfosQuery,
+  useGetAchivementsQuery,
 } from '../services/getData'
 import { experiences } from '../objects/Experiences'
 import educations from '../objects/Educations'
@@ -15,11 +16,13 @@ import Skills from '../components/Skills'
 import skills from '../objects/Skills'
 import Error from '../components/Error'
 import Hero from '../components/Hero'
+import Achivements from '../components/Achivements'
 
 const AboutPage = () => {
   const { data, isLoading, error } = useGetAccountInfosQuery(owner)
   const { data: followers } = useGetAccountFollowersQuery(owner)
   const { data: followings } = useGetAccountFollowingsQuery(owner)
+  const { data: achivements } = useGetAchivementsQuery(owner)
 
   if (isLoading) return <Loader />
   if (error || !data) return <Loader reactElement={<Error />} />
@@ -34,6 +37,7 @@ const AboutPage = () => {
           followings={followings?.data?.data ?? []}
         />
         <Hero account={data?.data} />
+        <Achivements achivements={achivements ?? []} />
         <Skills subTitle={'My skills'} object={skills} accordionIsOpen={true} />
         <ExperiencesOrEductations object={educations} subTitle={'My studies'} />
         <ExperiencesOrEductations

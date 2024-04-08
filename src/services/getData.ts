@@ -33,6 +33,9 @@ export const gitHubApi = createApi({
     getAccountFollowings: builder.query<GitHubAccountFollwers, string>({
       query: (name) => `${name}/followings`,
     }),
+    getAchivements: builder.query<string[], string>({
+      query: (name) => `${name}/achivements`,
+    }),
   }),
 })
 
@@ -43,4 +46,5 @@ export const {
   useGetAccountOrgsQuery,
   useGetAccountFollowersQuery,
   useGetAccountFollowingsQuery,
+  useGetAchivementsQuery,
 } = gitHubApi

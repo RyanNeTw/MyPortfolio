@@ -25,6 +25,7 @@ const guessLogoByUrl: FC<{ url: string }> = ({ url }): ReactElement | null => {
       return <Twitter />
 
     case url.startsWith('https://www.linkedin.com/'):
+    case url.startsWith('https://linkedin.com/'):
       return <LinkedIn />
 
     case url.startsWith('https://gitlab.com/'):
@@ -34,6 +35,7 @@ const guessLogoByUrl: FC<{ url: string }> = ({ url }): ReactElement | null => {
       return <Malt />
 
     case url.startsWith('https://www.youtube.com/'):
+    case url.startsWith('https://youtube.com/'):
       return <Youtube />
 
     case url.startsWith('https://stackoverflow.com/'):
@@ -43,10 +45,12 @@ const guessLogoByUrl: FC<{ url: string }> = ({ url }): ReactElement | null => {
       return <Bento />
 
     case url.startsWith('https://dsc.bio/'):
-    case url.startsWith('https://discord.com/'):
+    case url.includes('https://discord'):
       return <Discord />
 
     case url.startsWith('https://mastodon.social/'):
+    case url.startsWith('https://m.'):
+    case url.includes('mastodon'):
       return <Mastodon />
 
     case url.includes('instagram'):

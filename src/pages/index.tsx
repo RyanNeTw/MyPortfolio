@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import AboutMe from '../components/AboutMe'
+import Achivements from '../components/Achivements'
 import ContactMe from '../components/ContactMe'
 import Error from '../components/Error'
 import Footer from '../components/Footer'
@@ -20,6 +21,7 @@ import {
   useGetAccountInfosQuery,
   useGetAccountOrgsQuery,
   useGetAccountReposQuery,
+  useGetAchivementsQuery,
 } from '../services/getData'
 
 const MainPage = () => {
@@ -40,6 +42,7 @@ const MainPage = () => {
   const { data: orgs } = useGetAccountOrgsQuery(query)
   const { data: followers } = useGetAccountFollowersQuery(query)
   const { data: followings } = useGetAccountFollowingsQuery(query)
+  const { data: achivements } = useGetAchivementsQuery(query)
 
   if (isLoading) return <Loader />
   if (error || !data) return <Loader reactElement={<Error />} />
@@ -55,6 +58,7 @@ const MainPage = () => {
         />
         <Hero account={data?.data} />
         <AboutMe account={data?.data} />
+        <Achivements achivements={achivements ?? []} />
         {orgs?.data?.data?.length ? (
           <Organizations orgs={orgs ? orgs?.data?.data : []} />
         ) : null}
