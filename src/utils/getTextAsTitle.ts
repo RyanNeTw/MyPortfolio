@@ -1,5 +1,5 @@
-const getTextAsTitle = (text: string): string | null => {
-  if (!text) return null
+const getTextAsTitle = (text: string): string => {
+  if (!text) return ''
   return text[0].toUpperCase() + text.slice(1)
 }
 

@@ -28,3 +28,7 @@ API used : https://flagsapi.com/#quick
 
 Emojis from github are retrieved as text (example: :ok_hand:). Each text pass throw guessEmojiFromText function to return an emojis.
 API used : https://emoji-api.com/
+
+### Skill Icon
+
+API used : https://skillicons.dev

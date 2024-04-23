@@ -12,6 +12,7 @@ import {
 } from '../services/getData'
 import { experiences } from '../objects/Experiences'
 import educations from '../objects/Educations'
+import projects from '../objects/Projects'
 import Skills from '../components/Skills'
 import skills from '../objects/Skills'
 import Error from '../components/Error'
@@ -38,12 +39,14 @@ const AboutPage = () => {
         />
         <Hero account={data?.data} />
         <Achivements achivements={achivements ?? []} />
-        <Skills subTitle={'My skills'} object={skills} accordionIsOpen={true} />
-        <ExperiencesOrEductations object={educations} subTitle={'My studies'} />
+        <Skills subTitle={'My skills'} object={skills} />
         <ExperiencesOrEductations
           object={experiences}
           subTitle={'My experiences'}
+          accordionIsOpen={true}
         />
+        <ExperiencesOrEductations object={educations} subTitle={'My studies'} />
+        <ExperiencesOrEductations object={projects} subTitle={'My projects'} />
       </section>
       <Footer account={data?.data} />
     </>

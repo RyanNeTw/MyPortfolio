@@ -1,3 +1,5 @@
+import SkillsIcons from './types/skillsIcons'
+
 export type Data<T> = {
   status: number
   data: T
@@ -221,13 +223,14 @@ export enum ExperienceEnum {
   FREELANCE = 'Freelance',
   APPRENTICESHIP = 'Apprenticeship',
   BLOG = 'Blog',
+  DEVELOPPER = 'Developper',
 }
 
 export type Experience = {
   place: string
   role: string
   description: string
-  time: string
+  time?: string
   image_link: string
   image_alt: string
   type?: ExperienceEnum
@@ -238,9 +241,8 @@ export type Experience = {
 }
 
 export type Skill = {
-  image_link: string
-  image_alt: string
-  language_name: string
+  image_link?: string
+  language_name: SkillsIcons | string
   website: string
 }
 

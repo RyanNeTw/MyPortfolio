@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Skill } from '../types'
+import getTextAsTitle from '../utils/getTextAsTitle'
 import Accordion from './UI/Accordion'
 import Badge from './UI/Badge'
 
@@ -22,10 +23,13 @@ const Skills: FC<{
 }
 
 const Element: FC<{ element: Skill }> = ({ element }) => {
-  const image = (
+  let image = (
     <img
-      src={element.image_link}
-      alt={element.image_alt}
+      src={
+        element.image_link ??
+        `https://skillicons.dev/icons?i=${element.language_name}`
+      }
+      alt={`${getTextAsTitle(element.language_name)}'s logo`}
       className="rounded-sm w-12 self-center"
       loading="lazy"
     />
@@ -39,7 +43,10 @@ const Element: FC<{ element: Skill }> = ({ element }) => {
         rel="noreferrer"
         className="flex flex-col justify-between hover:scale-105 transition"
       >
-        <Badge text={element.language_name} reactElement={image} />
+        <Badge
+          text={getTextAsTitle(element.language_name)}
+          reactElement={image}
+        />
       </a>
     </>
   )

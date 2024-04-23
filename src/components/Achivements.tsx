@@ -12,7 +12,7 @@ const Achivements: FC<{ achivements: string[] }> = ({ achivements }) => {
             <img
               src={a}
               alt={`Github achivement : ${a.split('/')[4].replaceAll('-', ' ')}`}
-              className="w-24 hover:scale-105 transition"
+              className="w-20 hover:scale-105 transition"
             />
           </li>
         ))}
