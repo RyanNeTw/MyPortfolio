@@ -21,6 +21,9 @@ module.exports = {
       width: {
         mid: '49%',
       },
+      blur: {
+        xs: '1px',
+      },
     },
   },
   plugins: [

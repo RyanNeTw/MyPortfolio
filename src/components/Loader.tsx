@@ -20,7 +20,9 @@ const Loader: FC<{ reactElement?: ReactElement }> = ({ reactElement }) => {
             RyanTw
             <span className="text-lg pl-2 font-thin">Portfolio</span>
           </h2>
-          <Logo />
+          <div className="animate-spin">
+            <Logo />
+          </div>
         </div>
         {reactElement}
       </div>

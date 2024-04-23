@@ -5,7 +5,7 @@ import Image from './Image'
 const FollowerOrFollowing: FC<{ follower: Follower }> = ({ follower }) => {
   return (
     <>
-      <div>
+      <div className="blur-xs hover:blur-none transition">
         <Image imageUrl={follower.avatar_url} url={follower.login} />
       </div>
     </>

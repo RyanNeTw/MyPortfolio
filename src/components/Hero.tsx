@@ -11,23 +11,23 @@ const Hero: FC<{ account: Account }> = ({ account }) => {
 
   return (
     <>
-      <div className="group rounded-lg px-4 py-2 outline outline-offset-2 outline-1 outline-pri hover:scale-105 transition flex flex-col">
-        <div>
-          <div className="w-4 float-left mr-2 fill-pri group-hover:scale-105">
-            <Alert />
+      <Link to={'/my-resume'}>
+        <div className="group rounded-lg px-4 py-2 outline outline-offset-2 outline-1 outline-pri transition flex flex-col">
+          <div>
+            <div className="w-4 float-left mr-2 fill-pri group-hover:scale-105">
+              <Alert />
+            </div>
+            <Paragraphe
+              text="Hello, I'm looking for a apprenticeship position as a full stack developer for September 2024. Available to discuss opportunities or receive help in my search. Thank you!"
+              addStyle="clear-none"
+              size={true}
+            />
           </div>
-          <Paragraphe
-            text="Hello, I'm looking for a apprenticeship position as a full stack developer for September 2024. Available to discuss opportunities or receive help in my search. Thank you!"
-            addStyle="clear-none"
-            size={true}
-          />
-        </div>
-        <div className="self-end flex flex-wrap gap-2">
-          <Link to={'/my-resume'}>
+          <div className="self-end flex flex-wrap gap-2">
             <Button text="My resume" />
-          </Link>
+          </div>
         </div>
-      </div>
+      </Link>
     </>
   )
 }

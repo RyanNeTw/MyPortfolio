@@ -14,7 +14,7 @@ const ResumePage = () => {
 
   const buttonDownload = (
     <>
-      <div className="self-end" onClick={handleDownload}>
+      <div className="self-end animate-bounce" onClick={handleDownload}>
         <Button text="Download" />
       </div>
     </>
@@ -33,7 +33,7 @@ const ResumePage = () => {
           <img
             src="/CvRyanEzZerqti2024.png"
             alt="Ryan Ez Zerqti's 2024 resume"
-            className="rounded-lg mt-2"
+            className="rounded-lg"
           />
         </div>
         <Footer />
