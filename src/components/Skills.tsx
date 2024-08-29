@@ -3,6 +3,7 @@ import { Skill } from '../types'
 import getTextAsTitle from '../utils/getTextAsTitle'
 import Accordion from './UI/Accordion'
 import Badge from './UI/Badge'
+import { isSkillsIcons } from '../types/skillsIcons'
 
 const Skills: FC<{
   subTitle: string
@@ -22,8 +23,8 @@ const Skills: FC<{
   )
 }
 
-const Element: FC<{ element: Skill }> = ({ element }) => {
-  let image = (
+export const ElementSkill: FC<{ element: Skill }> = ({ element }) => {
+  let image =  (
     <img
       src={
         element.image_link ??
@@ -45,7 +46,7 @@ const Element: FC<{ element: Skill }> = ({ element }) => {
       >
         <Badge
           text={getTextAsTitle(element.language_name)}
-          reactElement={image}
+          {...(image && { reactElement: image })}
         />
       </a>
     </>
@@ -56,7 +57,7 @@ const List: FC<{ object: Skill[] }> = ({ object }) => {
   return (
     <>
       <div className="flex flex-wrap gap-4">
-        {object?.map((o, index) => <Element element={o} key={index} />)}
+        {object?.map((o, index) => <ElementSkill element={o} key={index} />)}
       </div>
     </>
   )

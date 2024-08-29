@@ -18,7 +18,6 @@ import skills from '../objects/Skills'
 import Error from '../components/Error'
 import Hero from '../components/Hero'
 import Achivements from '../components/Achivements'
-import GhChart from '../components/GhCart'
 
 const AboutPage = () => {
   const { data, isLoading, error } = useGetAccountInfosQuery(owner)

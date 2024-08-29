@@ -4,6 +4,7 @@ import getDate from '../utils/getDate'
 import Accordion from './UI/Accordion'
 import Badge from './UI/Badge'
 import Paragraphe from './UI/Paragraphe'
+import { ElementSkill } from './Skills'
 
 const ExperiencesOrEductations: FC<{
   object: Experience[]
@@ -40,12 +41,12 @@ const Element: FC<{ object: Experience }> = ({ object }) => {
             </div>
           </div>
           <div>
-            <h5 className="font-mono text-xs text-sec">{object.type}</h5>
+            {object.type && <h5 className="font-mono text-xs text-sec">{object.type}</h5>}
             <Paragraphe size={true} text={object.description} />
           </div>
           <div className="flex flex-wrap gap-2">
             {object?.language?.map((l, index) => (
-              <Badge text={l} key={index} />
+              <ElementSkill element={{language_name: l, website: l }} key={index}/>
             ))}
           </div>
           <h5 className="font-mono text-xs text-sec self-end">

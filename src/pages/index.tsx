@@ -56,7 +56,7 @@ const MainPage = () => {
           followers={followers?.data?.data ?? []}
           followings={followings?.data?.data ?? []}
         />
-        <Hero account={data?.data} />
+        <HireMe account={data.data} />
         <AboutMe account={data?.data} />
         <Achivements achivements={achivements ?? []} />
         {orgs?.data?.data?.length ? (
@@ -70,7 +70,6 @@ const MainPage = () => {
           repositories={repos ? repos?.data : []}
           isLoading={isLoadingRepos}
         />
-        <HireMe account={data.data} />
         <Search />
         <ContactMe account={data.data} />
       </section>

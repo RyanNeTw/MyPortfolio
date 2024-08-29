@@ -1,9 +1,10 @@
 import { Experience, ExperienceEnum } from '../types'
+import SkillsIcons from '../types/skillsIcons'
 
 export const experiences: Experience[] = [
   {
     place: 'Growth & Scale Factory',
-    role: 'Front developer',
+    role: 'Front Developer',
     description:
       "Creation of a Shopify template that's quick and easy to learn, as well as some work on other templates.",
     time: '3months',
@@ -13,12 +14,12 @@ export const experiences: Experience[] = [
     type: ExperienceEnum.INTERSHIP,
     date_start: '01-06-2022',
     date_end: '01-09-2022',
-    language: ['Liquid', 'Html', 'Css', 'Js'],
+    language: ['Liquid', SkillsIcons.HTML, SkillsIcons.CSS, SkillsIcons.JavaScript],
     website: 'https://gsf.digital/',
   },
   {
     place: 'Growth & Scale Factory',
-    role: 'Front developer',
+    role: 'Front Developer',
     description:
       "Creation of a Shopify template that's quick and easy to learn, as well as some work on other templates.",
     time: '♾️',
@@ -28,7 +29,7 @@ export const experiences: Experience[] = [
     type: ExperienceEnum.FREELANCE,
     date_start: '01-09-2022',
     date_end: '01-09-2023',
-    language: ['Liquid', 'Html', 'Css', 'Js'],
+    language: ['Liquid', SkillsIcons.HTML, SkillsIcons.CSS, SkillsIcons.JavaScript],
     website: 'https://gsf.digital/',
   },
   {
@@ -43,7 +44,7 @@ export const experiences: Experience[] = [
     type: ExperienceEnum.INTERSHIP,
     date_start: '01-03-2023',
     date_end: '31-08-2023',
-    language: ['Typescript', 'GraphQl', 'Tailwind', 'NextJs'],
+    language: [SkillsIcons.TypeScript, SkillsIcons.GraphQL, SkillsIcons.Tailwind, SkillsIcons.NextJS],
     website: 'https://heybilly.io/',
   },
   {
@@ -58,7 +59,22 @@ export const experiences: Experience[] = [
     type: ExperienceEnum.APPRENTICESHIP,
     date_start: '01-09-2023',
     date_end: '31-08-2024',
-    language: ['Typescript', 'GraphQl', 'Tailwind', 'NextJs'],
+    language: [SkillsIcons.TypeScript, SkillsIcons.GraphQL, SkillsIcons.Tailwind, SkillsIcons.NextJS],
     website: 'https://heybilly.io/',
+  },
+  {
+    place: 'Hyenallc',
+    role: 'Front Developer',
+    description:
+      `Designed & developed Hyenallc's web site.`,
+    time: '1 month',
+    image_link:
+      '/logoHyenallc.svg',
+    image_alt: "Hyenallc's logo",
+    type: ExperienceEnum.FREELANCE,
+    date_start: '01-05-2024',
+    date_end: '01-06-2024',
+    language: [SkillsIcons.React, SkillsIcons.Tailwind],
+    website: 'https://hyenallc.com/',
   },
 ]

@@ -15,18 +15,6 @@ const skills: Skill[] = [
     language_name: SkillsIcons.TypeScript,
   },
   {
-    website: '',
-    language_name: SkillsIcons.HTML,
-  },
-  {
-    website: '',
-    language_name: SkillsIcons.CSS,
-  },
-  {
-    website: '',
-    language_name: SkillsIcons.Sass,
-  },
-  {
     website: 'https://git-scm.com/doc',
     language_name: SkillsIcons.Git,
   },
@@ -92,20 +80,8 @@ const skills: Skill[] = [
     language_name: SkillsIcons.Docker,
   },
   {
-    website: 'https://www.djangoproject.com/',
-    language_name: SkillsIcons.Django,
-  },
-  {
     website: '',
     language_name: SkillsIcons.PHP,
-  },
-  {
-    website: '',
-    language_name: SkillsIcons.Python,
-  },
-  {
-    website: '',
-    language_name: SkillsIcons.Postman,
   },
   {
     website: '',

@@ -1,4 +1,4 @@
-const enum SkillsIcons {
+enum SkillsIcons {
   Ableton = 'ableton',
   Activitypub = 'activitypub',
   Actix = 'actix',
@@ -235,5 +235,11 @@ const enum SkillsIcons {
   Yew = 'yew',
   Zig = 'zig',
 }
+
+export const ALL_ICONS = Object.values(SkillsIcons)
+export function isSkillsIcons(value: string): value is SkillsIcons {
+  return ALL_ICONS.includes(value as SkillsIcons)
+}
+
 
 export default SkillsIcons
