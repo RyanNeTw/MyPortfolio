@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import AboutMe from '../components/AboutMe'
 import Error from '../components/Error'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
 import Loader from '../components/Loader'
 import Profil from '../components/Profil'
 import Repos from '../components/Repos'
@@ -15,6 +13,7 @@ import {
   useGetAccountInfosQuery,
   useGetAccountReposQuery,
 } from '../services/getData'
+import HireMe from '../components/HireMe'
 
 const RepositoriesPage = () => {
   const location = useLocation()
@@ -46,8 +45,7 @@ const RepositoriesPage = () => {
           followers={followers?.data?.data ?? []}
           followings={followings?.data?.data ?? []}
         />
-        <Hero account={data?.data} />
-        <AboutMe account={data?.data} />
+        <HireMe account={data?.data} />
         <Repos
           repositories={repos ? repos?.data : []}
           isLoading={isLoadingRepos}

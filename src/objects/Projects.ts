@@ -1,4 +1,4 @@
-import { Experience, ExperienceEnum } from '../types'
+import { Experience } from '../types'
 import SkillsIcons from '../types/skillsIcons'
 
 const projects: Experience[] = [

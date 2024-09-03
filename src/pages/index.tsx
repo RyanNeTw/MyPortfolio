@@ -6,7 +6,6 @@ import ContactMe from '../components/ContactMe'
 import Error from '../components/Error'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
 import HireMe from '../components/HireMe'
 import Loader from '../components/Loader'
 import Organizations from '../components/Organizations'
@@ -58,6 +57,7 @@ const MainPage = () => {
         />
         <HireMe account={data.data} />
         <AboutMe account={data?.data} />
+        <Search />
         <Achivements achivements={achivements ?? []} />
         {orgs?.data?.data?.length ? (
           <Organizations orgs={orgs ? orgs?.data?.data : []} />
@@ -70,7 +70,6 @@ const MainPage = () => {
           repositories={repos ? repos?.data : []}
           isLoading={isLoadingRepos}
         />
-        <Search />
         <ContactMe account={data.data} />
       </section>
       <Footer account={data?.data} />

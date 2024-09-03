@@ -16,8 +16,8 @@ import projects from '../objects/Projects'
 import Skills from '../components/Skills'
 import skills from '../objects/Skills'
 import Error from '../components/Error'
-import Hero from '../components/Hero'
 import Achivements from '../components/Achivements'
+import HireMe from '../components/HireMe'
 
 const AboutPage = () => {
   const { data, isLoading, error } = useGetAccountInfosQuery(owner)
@@ -37,7 +37,7 @@ const AboutPage = () => {
           followers={followers?.data?.data ?? []}
           followings={followings?.data?.data ?? []}
         />
-        <Hero account={data?.data} />
+        <HireMe account={data?.data}/>
         <Achivements achivements={achivements ?? []} />
         <Skills subTitle={'My skills'} object={skills} />
         <ExperiencesOrEductations

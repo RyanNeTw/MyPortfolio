@@ -3,7 +3,6 @@ import { Skill } from '../types'
 import getTextAsTitle from '../utils/getTextAsTitle'
 import Accordion from './UI/Accordion'
 import Badge from './UI/Badge'
-import { isSkillsIcons } from '../types/skillsIcons'
 
 const Skills: FC<{
   subTitle: string
@@ -31,7 +30,7 @@ export const ElementSkill: FC<{ element: Skill }> = ({ element }) => {
         `https://skillicons.dev/icons?i=${element.language_name}`
       }
       alt={`${getTextAsTitle(element.language_name)}'s logo`}
-      className="rounded-sm w-12 self-center"
+      className="w-12 self-center"
       loading="lazy"
     />
   )

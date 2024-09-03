@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { Experience } from '../types'
 import getDate from '../utils/getDate'
 import Accordion from './UI/Accordion'
-import Badge from './UI/Badge'
 import Paragraphe from './UI/Paragraphe'
 import { ElementSkill } from './Skills'
 

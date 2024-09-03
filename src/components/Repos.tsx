@@ -92,14 +92,14 @@ const Repos: FC<{
         <div
           className={`flex flex-row justify-${repos?.length > 5 && onlyFive ? 'between' : 'end'} items-center mt-2`}
         >
+          <h5 className="font-mono text-sec text-sm">
+            {repos?.length} repositories
+          </h5>
           {onlyFive && repos?.length > 5 && (
             <Link to={`${url}`}>
               <Button text="See more" />
             </Link>
           )}
-          <h5 className="font-mono text-sec text-sm">
-            {repos?.length} repositories
-          </h5>
         </div>
         {!repos?.length && <NoRepos />}
       </div>
